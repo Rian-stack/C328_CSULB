@@ -15,5 +15,13 @@ def aircraft_max_revenue(cargo, capacity):
     return c[cargo_length][capacity]
 
 def main():
-    print()
+    cargo = [(10, 60), (20, 100), (30, 120)]
+    capacity = 50
+    max_value = aircraft_max_revenue(cargo, capacity)
+    print("Maximum value:", max_value)
+
+    cargo = [(40,10),(10,5),(20,15),(20,10)]
+    capacity = 60
+    max_value = aircraft_max_revenue(cargo, capacity)
+    print("Maximum value:", max_value)
 main()
