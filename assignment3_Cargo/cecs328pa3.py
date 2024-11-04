@@ -1,4 +1,5 @@
 # Rianne Papa
+import random
 
 def aircraft_max_revenue(cargo, capacity):
     cargo_length = len(cargo)
@@ -15,13 +16,8 @@ def aircraft_max_revenue(cargo, capacity):
     return c[cargo_length][capacity]
 
 def main():
-    cargo = [(10, 60), (20, 100), (30, 120)]
-    capacity = 50
-    max_value = aircraft_max_revenue(cargo, capacity)
-    print("Maximum value:", max_value)
-
-    cargo = [(40,10),(10,5),(20,15),(20,10)]
-    capacity = 60
+    cargo = [(random.randint(1, 2000), random.randint(1, 20000)) for _ in range(2000)]
+    capacity = random.randint(15001, 20000)
     max_value = aircraft_max_revenue(cargo, capacity)
     print("Maximum value:", max_value)
 main()
